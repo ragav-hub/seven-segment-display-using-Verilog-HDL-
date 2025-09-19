@@ -71,7 +71,7 @@ reg [3:0] bcd;
 wire [6:0] seg;   
 BCD_to_7seg uut (bcd,seg);
 initial begin
-$display("Time=%0t BCD=%b (%0d) Segments=%b", $time, bcd, bcd, seg);
+$monitor("Time=%0t BCD=%b (%0d) Segments=%b", $time, bcd, bcd, seg);
 bcd = 4'b0000; #10; 
 bcd = 4'b0001; #10; 
 bcd = 4'b0010; #10; 
